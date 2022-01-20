@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.6.2</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.rastroinfosistemas</groupId>
+	<artifactId>Crud</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+	<name>Crud</name>
+	<description>Requisitos funcionais:  •	Desenvolver microserviço para gerenciamento e autenticação de usuarios:  •	Deve permitir as operações de CRUD (create, retrieve, update, delete) para dados de um usuário de sistema (id, nome, email, senha, endereço, telefone, perfil)  •	Os perfis de usuário aceitos são: ADMIN e USER  •	Deve permitir operação de pesquisa de usuários, com filtros, paginação e ordenação dos dados.  •	Deve permitir autenticação de usuários  •	Os recursos devem estar protegidos para que apenas usuários autenticados tenham acesso.  •	Os recursos de criação, edição e remoção de usuários devem estar protegidos para que apenas usuários com perfil de ADMIN tenham acesso. •	 Requisitos não funcionais:  •	O código fonte deve ser publicado no Github.  •	O microserviço deve ser desenvolvido utilizando Spring Boot e banco de dados MongoDB.  •	Todos os recuros do microserviço deverão estar cobertos por testes unitários.  •	O microserviço deve ser empacotado em uma imagem docker no processo de build.  •	Criar arquivo YAML com a definição do deployment do microserviço em Kubernetes. Assim poderemos fazer o build da imagem docker e realizar o deploy no nosso cluster Kubernetes.  •	O processo de build e run deve estar documentado para que possamos subir sua aplicação rapidamente e sem erros. </description>
+	<properties>
+		<java.version>1.8</java.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-mongodb-reactive</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.projectreactor</groupId>
+			<artifactId>reactor-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
