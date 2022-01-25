@@ -7,7 +7,7 @@
 - Deve permitir autenticação de     usuários 
 - Os recursos devem estar     protegidos para que apenas usuários autenticados tenham acesso. 
 - Os recursos de criação, edição e     remoção de usuários devem estar protegidos para que apenas usuários com     perfil de ADMIN tenham acesso.
--  
+ 
 
 **Requisitos não funcionais:** 
 
